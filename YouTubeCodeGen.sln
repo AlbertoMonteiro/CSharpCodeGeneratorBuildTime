@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouTubeCodeGen.CodeGenerato
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouTubeCodeGen.TheApp", "src\YouTubeCodeGen.TheApp\YouTubeCodeGen.TheApp.csproj", "{B4BDFC28-E138-423A-8961-919888846693}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouTubeCodeGen.Mesure", "src\YouTubeCodeGen.Mesure\YouTubeCodeGen.Mesure.csproj", "{67F4D50A-0535-46C1-BDD9-49768FBC6C37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B4BDFC28-E138-423A-8961-919888846693}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4BDFC28-E138-423A-8961-919888846693}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4BDFC28-E138-423A-8961-919888846693}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67F4D50A-0535-46C1-BDD9-49768FBC6C37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67F4D50A-0535-46C1-BDD9-49768FBC6C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67F4D50A-0535-46C1-BDD9-49768FBC6C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67F4D50A-0535-46C1-BDD9-49768FBC6C37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
