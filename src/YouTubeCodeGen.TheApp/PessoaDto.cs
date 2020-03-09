@@ -9,6 +9,6 @@
         public string MiniBiografia { get; set; }
 
         public override string ToString()
-            => $"Sou {Nome} tenho {Idade} anos de idade, {(Casado ? "sou" : "não")} sou casado e meu canal no YouTube é {YouTubeChannel}";
+            => $"Sou {Nome} tenho {Idade} anos de idade, {(Casado ? "" : "não")} sou casado e meu canal no YouTube é {YouTubeChannel}";
     }
 }

@@ -19,7 +19,8 @@ namespace YouTubeCodeGen.Mesure
             {
                 Nome = "Alberto Monteiro",
                 Idade = 29,
-                Casado = true
+                Casado = true,
+                MiniBio = "Mini Biografia"
             };
         }
 

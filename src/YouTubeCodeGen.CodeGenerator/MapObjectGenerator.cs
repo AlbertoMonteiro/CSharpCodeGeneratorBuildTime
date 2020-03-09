@@ -53,7 +53,6 @@ namespace YouTubeCodeGen.CodeGenerator
         {
             var methodModel = semanticModel.GetDeclaredSymbol(method);
 
-            var attributes = methodModel.GetAttributes();
             var parameter = methodModel.Parameters[0];
 
             var paramName = parameter.Name;
@@ -64,13 +63,14 @@ namespace YouTubeCodeGen.CodeGenerator
             var propertiesToGet = parameter.Type.GetMembers().OfType<IPropertySymbol>();
             var returnType = methodModel.ReturnType;
             var propertiesToSet = returnType.GetMembers().OfType<IPropertySymbol>();
-            var propetiNames = propertiesToSet.Join(propertiesToGet, p => p.Name, p => p.Name, (p1, p2) => p1.Name);
+            var propertyNames = propertiesToSet.Join(propertiesToGet, p => p.Name, p => p.Name, (p1, p2) => p1.Name);
             cb.Write($"public {returnType.Name} {methodModel.Name}({paramsStr})");
             cb.StartBlock();
             cb.Write($"var destination = new {returnType.Name}();");
-            foreach (var prop in propetiNames)
+            foreach (var prop in propertyNames)
                 cb.Write($"destination.{prop} = {paramName}.{prop};");
 
+            var attributes = methodModel.GetAttributes();
             foreach (var attr in attributes.Where(x => x.AttributeClass.Name == nameof(MapProperty)))
             {
                 var (source, dest) = (attr.ConstructorArguments[0], attr.ConstructorArguments[1]);

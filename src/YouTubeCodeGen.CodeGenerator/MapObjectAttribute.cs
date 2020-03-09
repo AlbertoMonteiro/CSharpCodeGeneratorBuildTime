@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 namespace YouTubeCodeGen.CodeGenerator
 {
-    [AttributeUsage(AttributeTargets.Interface, Inherited = false, AllowMultiple = true)]
+    [AttributeUsage(AttributeTargets.Interface, Inherited = false, AllowMultiple = false)]
     [CodeGenerationAttribute(typeof(MapObjectGenerator))]
     [Conditional("CodeGeneration")]
     public class MapObjectAttribute : Attribute

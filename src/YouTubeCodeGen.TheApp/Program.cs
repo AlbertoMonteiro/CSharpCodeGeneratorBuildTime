@@ -15,10 +15,12 @@ namespace YouTubeCodeGen.TheApp
             {
                 Nome = "Alberto Monteiro",
                 Idade = 29,
-                Casado = true
+                Casado = true,
+                MiniBio = "Mini Biografia"
             });
 
             Console.WriteLine(pessoaDto);
+            Console.WriteLine(pessoaDto.MiniBiografia);
         }
     }
 }
